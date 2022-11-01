@@ -1,0 +1,40 @@
+.banner{
+    display: flex;
+    background-image: url(./assets/chromatica.jpg);
+    padding: 200px 0;
+    background-size: cover;
+    padding: 15%;
+    justify-content: space-evenly;
+}
+
+.caixa{
+    background-color: #366ba4;
+    border-radius: 50px;
+    width: 60vh;
+    padding: 10vh 5vh;
+}
+
+.caixa .img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caixa .txt{
+    display: flex;
+    font-family: 'iceland', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.caixa .titulo{
+    padding-bottom: 20px;
+    font-weight: bolder;
+    display: flex;
+    font-family: 'iceland', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    align-items: center;
+    flex-direction: column;
+}

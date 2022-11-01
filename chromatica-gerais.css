@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+    background-color: #602344;
+    border-bottom: solid 3px;
+    justify-content: space-between;
+}
+
+.header_chromatica {
+    display: flex;
+    /* width: 100%; */
+    margin: 0;
+    padding: 5px;
+    padding-left: 25px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+nav {
+    font-family: 'roboto', sans-serif;
+    margin: 1% 10%;
+    width: 40%;
+    margin-top: 1.5%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li {
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+nav a:hover {
+    border-bottom: 4px solid #4B58CA;
+    font-weight: bold;
+}
+
+.login_cadastro {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.chr-login {
+    margin-right: 10px;
+    display: inline-block;
+    border: solid 3px #1D4908;
+    padding: 1px;
+    width: 110px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #FAF9FF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login:hover {
+    border: solid 3px #FAF9FF
+}
+
+.chr-cadastro {
+    display: inline-block;
+    background-color: #DB4444;
+    border: solid 3px #DB4444;
+    padding: 1px;
+    width: 110px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #000235;
+    text-align: center;
+}
+
+.chr-cadastro:hover {
+    background-color: #DB4444;
+    background-color: #ed674c;
+    border: solid 3px #c7512e;
+}
+
+footer {
+    display: flex;
+    font-family: 'iceland', Arial;
+    font-size: 140%;
+    padding: 45px 0;
+    background-color: #602344;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  footer p {
+    color: #fff;
+  }
