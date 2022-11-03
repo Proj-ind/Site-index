@@ -1,40 +1,146 @@
-.banner{
+.banner {
     display: flex;
     background-image: url(./assets/chromatica.jpg);
-    padding: 200px 0;
     background-size: cover;
-    padding: 15%;
+    padding: 10%;
     justify-content: space-evenly;
 }
 
-.caixa{
-    background-color: #366ba4;
-    border-radius: 50px;
+.caixa {
+    box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    -webkit-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    background-color: rgba(255, 0, 168, 0.3);
     width: 60vh;
     padding: 10vh 5vh;
 }
 
-.caixa .img{
+.caixa:hover {
+    box-shadow: 10px 11px 43px -1px rgba(240, 114, 200, 0.73);
+    -webkit-box-shadow: 10px 11px 43px -1px rgba(240, 114, 200, 0.73);
+    -moz-box-shadow: 10px 11px 43px -1px rgba(240, 114, 200, 0.73);
+}
+
+.caixa .img {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.caixa .txt{
+.txt {
     display: flex;
     font-family: 'iceland', Arial, Helvetica, sans-serif;
     font-size: 25px;
     align-items: center;
     flex-direction: column;
+    color: white;
     padding-top: 20px;
+    text-shadow: 10px;
+    text-shadow: 4px 6px 9px rgba(0, 0, 0, 1);
 }
 
-.caixa .titulo{
+.caixa .titulo {
+    color: white;
+    text-shadow: 4px 6px 9px rgba(0, 0, 0, 1);
     padding-bottom: 20px;
-    font-weight: bolder;
     display: flex;
     font-family: 'iceland', Arial, Helvetica, sans-serif;
     font-size: 25px;
     align-items: center;
     flex-direction: column;
+}
+
+.tribos {
+    display: flex;
+    width: 100%;
+    padding: 5% 0;
+    align-items: center;
+}
+
+.tribos.k {
+    background-color: #FF00A8;
+}
+
+.tribos.e {
+    background-color: #1D4908;
+}
+
+.tribos.j {
+    background-color: #d5d9dd;
+}
+
+.tribos.c {
+    background-color: #FFC940;
+}
+
+.tribos.f {
+    background-color: #4B58CA;
+}
+
+.tribos.g {
+    background-color: #DB4444;
+}
+
+.txt.bin.s {
+    text-shadow: 4px 6px 9px rgb(206, 206, 206, 0.2);
+    color: black;
+}
+
+.tribos-img {
+    padding: 0px 70px;
+}
+
+.txt b {
+    padding-bottom: 25px;
+}
+
+.txt.bin {
+    padding: 0 250px;
+}
+
+.conteudo-final {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    padding: 10% 0;
+    align-items: center;
+    background-image: url(./assets/ladygaga2.png);
+}
+
+
+.caixa-final {
+    box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    -webkit-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
+    background-color: rgba(255, 201, 64, 0.3);
+   justify-content: center;
+   padding: 100px;
+   width: 60vh;
+   padding: 10vh 5vh;
+}
+
+.caixa-final b{
+
+}
+
+.caixa-final:hover{
+    box-shadow: 10px 11px 43px -1px rgba(250, 179, 98, 0.73);
+    -webkit-box-shadow: 10px 11px 43px -1px rgba(250, 179, 98, 0.73);
+    -moz-box-shadow: 10px 11px 43px -1px rgba(250, 179, 98, 0.73);   
+}
+
+
+.btn a {
+    display: inline-block;
+    padding: 5px;
+    width: 300px;
+    background-color: #FFC940;
+    font-family: 'iceland', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #FAF9FF;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
 }
