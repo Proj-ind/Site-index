@@ -8,16 +8,18 @@
 
 main{
     background-image: url(../assets/lg4.jpg);
+    width: 100VW;
+    height: 100VH;
+    justify-content: flex-start;
     display: flex;
-    background-size: cover;
-    justify-content: flex-end;
-    padding: 12.3% 0;
+    align-items: center;
 }
 
 .corpo{
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 3% 2%;
-    margin-right: 50px;
+    width: 45%;
+    margin-left: 50px;
     }
 
     .login p{

@@ -1,67 +1,77 @@
- main{
-    background-image: url(../assets/lg3.jpg);
+ main {
+     background-image: url(../assets/lg3.jpg);
+     display: flex;
+     background-size: cover;
+     justify-content: flex-end;
+     padding: 4.7% 0;
+ }
+
+ .corpo {
+     background-color: rgba(0, 0, 0, 0.4);
+     padding: 3% 2%;
+     margin-right: 50px;
+ }
+
+ .cadastro p {
+     color: white;
+     font-size: 25px;
+     font-family: 'iceland', Arial, Helvetica, sans-serif;
+     padding-bottom: 20px;
+ }
+
+ .container {
+     margin-right: 20px;
+     width: 75%;
+     padding-bottom: 3%;
+     align-items: flex-start;
+ }
+
+ .container input {
+     padding: 10px;
+     border: 2px solid;
+     text-align: center;
+     width: 100%;
+     justify-content: center;
+ }
+
+ .corpo label {
+     color: white;
+     font-size: 25px;
+     font-family: 'iceland', Arial, Helvetica, sans-serif;
+     display: flex;
+ }
+
+ .corpo label p {
+     color: #FFC940;
+ }
+
+ .container.a label {
+     background-color: rgb(0, 0, 0);
+ }
+
+ .corpo .conta {
     display: flex;
-    background-size: cover;
-    justify-content: flex-end;
-    padding: 4.7% 0;
-}
-
-.corpo{
-background-color: rgba(0, 0, 0, 0.4);
-padding: 3% 2%;
-margin-right: 50px;
-}
-
-.cadastro p{
-    color: white;
-    font-size: 25px;
-    font-family: 'iceland', Arial, Helvetica, sans-serif;
-    padding-bottom: 20px;
-}
-
-.container{
-    margin-right: 20px;
-    width: 75%;
-    padding-bottom: 3%;
-    align-items: flex-start;
-}
-
-.container input{
-    padding: 10px;
-    border: 2px solid;
-    text-align: center;
-    width: 100%;
     justify-content: center;
-}
+     align-items: center;
+     font-family: 'iceland', Arial, Helvetica, sans-serif;
+     font-size: 25px;
+     color: rgb(255, 255, 255);
+     /* text-shadow: 3px -3px 5px rgb(0, 0, 0); */
+ }
 
-.corpo label{
-    color: white;
-    font-size: 25px;
-    font-family: 'iceland', Arial, Helvetica, sans-serif;
-    display: flex;
-}
+ .botao {
+     display: inline-block;
+     padding: 5px;
+     border: 2px solid #000000;
+     width: 156px;
+     background-color: rgb(255, 255, 255);
+ }
 
-.corpo label p{
-    color: #FFC940;
-}
-
-.container.a label{
-    background-color: rgb(0, 0, 0);
-}
-
-.botao {
-    display: inline-block;
-    padding: 5px;
-    border: 2px solid #000000;
-    width: 156px;
-    background-color: rgb(255, 255, 255);
-}
-
-.botao a{
-    font-family: 'iceland', Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    text-shadow: #000000;
-    color: #000000;
-    font-size: 30px;
-    text-align: center;
-}
+ .botao a {
+     font-family: 'iceland', Arial, Helvetica, sans-serif;
+     text-decoration: none;
+     text-shadow: #000000;
+     color: #000000;
+     font-size: 30px;
+     text-align: center;
+ }
