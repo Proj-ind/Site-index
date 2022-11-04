@@ -1,6 +1,7 @@
 .banner {
     display: flex;
     background-image: url(./assets/chromatica.jpg);
+    background-attachment: fixed;
     background-size: cover;
     padding: 10%;
     justify-content: space-evenly;
@@ -107,6 +108,7 @@
     padding: 10% 0;
     align-items: center;
     background-image: url(./assets/ladygaga2.png);
+    background-attachment: fixed;
 }
 
 
@@ -115,14 +117,25 @@
     -webkit-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     background-color: rgba(255, 201, 64, 0.3);
-   justify-content: center;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+   align-items: center;
    padding: 100px;
    width: 60vh;
    padding: 10vh 5vh;
 }
 
 .caixa-final b{
-
+    color: white;
+    text-shadow: 4px 6px 9px rgba(0, 0, 0, 1);
+    padding-bottom: 20px;
+    display: flex;
+    font-family: 'iceland', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 45px 5px;
+    align-items: center;
+    flex-direction: column;
 }
 
 .caixa-final:hover{
@@ -136,10 +149,11 @@
     display: inline-block;
     padding: 5px;
     width: 300px;
+    border-radius: 100px;
     background-color: #FFC940;
     font-family: 'iceland', Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color: #FAF9FF;
+    color: #000000;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
