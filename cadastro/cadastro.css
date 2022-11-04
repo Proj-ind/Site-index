@@ -1,15 +1,17 @@
  main {
-     background-image: url(../assets/lg3.jpg);
-     display: flex;
-     background-size: cover;
-     justify-content: flex-end;
-     padding: 4.7% 0;
+    height: 100vh;
+    background-image: url(../assets/lg3.jpg);
+    display: flex;
+    background-size: cover;
+    justify-content: flex-end;
+    width: 100vw;
  }
 
  .corpo {
-     background-color: rgba(0, 0, 0, 0.4);
-     padding: 3% 2%;
-     margin-right: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 50vw;
+    margin-left: 50px;
  }
 
  .cadastro p {
@@ -57,6 +59,12 @@
      font-size: 25px;
      color: rgb(255, 255, 255);
      /* text-shadow: 3px -3px 5px rgb(0, 0, 0); */
+ }
+
+ .conta a{
+text-decoration: none;
+color: white;
+padding-left: 3px;
  }
 
  .botao {
