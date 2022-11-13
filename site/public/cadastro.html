@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/assets/logo2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/chromatica-gerais.css">
+    <title>Chromatica</title>
+</head>
+<body>
+
+<main>
+<div class="corpo">
+<div class="cadastro">
+    <p>My name isn't Alice
+        But I'll keep looking, I'll keep looking for wonderland</p>
+    </div>
+        <div class="container">
+            <label for="input_nome">Nome<p> *</p></label>
+            <input type="text" name="nome" id="input_nome" placeholder="Seu nome">
+        </div>
+        <div class="container">
+            <label for="input_sobrenome">Sobrenome<p> *</p></label>
+            <input type="text" name="sobrenome" id="input_sobrenome" placeholder="Seu sobrenome">
+        </div>
+        <div class="container">
+            <label for="input_email">E-mail<p> *</p></label>
+            <input type="text" name="email" id="input_email" placeholder="email@email.com">
+        </div>
+        <div class="container">
+            <label for="input_senha">Senha<p> *</p></label>
+            <input type="password" name="senha" id="input_senha" placeholder="*********">
+        </div>
+        <div class="container a">
+            <label for="input_confirmar_senha">Confirmar senha<p> *</p></label>
+            <input type="password" name="confirmar_senha" id="input_confirmar_senha" placeholder="*********">
+        </div>
+        <div class="conta"><span>Já tem uma</span><a href="./login.html"> conta</a></div>
+<button onclick="cadastrar()">
+Cadastre-se
+</button>
+</div>
+</main>
+
+</body>
+</html>
+
+
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_nome.value;
+        var sobrenomeVar = input_sobrenome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var confirmacaoSenhaVar = input_confirmar_senha.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" ||  sobrenomeVar == "" || confirmacaoSenhaVar == "") {
+            
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+            
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
