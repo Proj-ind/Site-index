@@ -16,15 +16,11 @@
 
 <body>
     <header>
-        <div class="header_chromatica">
+        <div style="display: flex; justify-content:center;" class="header_chromatica">
            <a href="./index.html"><div class="logo_chromatica">
                 <img src="./assets/assets/simbolo.png">
             </div>
         </a>
-            <div class="login_cadastro">
-                <a href="./login.html" class="chr-login">Login</a>
-                <a href="./cadastro.html" class="chr-cadastro">Cadastre-se</a>
-            </div>
         </div>
     </header>
 
@@ -38,13 +34,13 @@
                 <label for="">
                     <p>Qual é a sua melhor qualidade?</p>
                 </label>
-                <span>Gentileza <input type="checkbox" id="k1" value="a"></span>
-                <span>Apoiador <input type="checkbox" id="e1" value="b"></span>
-                <span>Coragem <input type="checkbox" id="j1" value="c"></span>
-                <span>Criatividade <input type="checkbox" id="c1" value="d"></span>
-                <span>Empatia <input type="checkbox" id="f1" value="e"></span>
-                <span>Disciplina <input type="checkbox" id="g1" value="f"></span>
-                <button onclick="div_1()">Enviar resposta</button>
+                <span>Gentileza <input name="questionario" type="radio" id="k1" value="1"></span>
+                <span>Apoiador <input name="questionario" type="radio" id="e1" value="2"></span>
+                <span>Coragem <input name="questionario" type="radio" id="j1" value="3"></span>
+                <span>Criatividade <input name="questionario" type="radio" id="c1" value="4"></span>
+                <span>Empatia <input name="questionario" type="radio" id="f1" value="5"></span>
+                <span>Disciplina <input name="questionario" type="radio" id="g1" value="6"></span>
+                <button id="div_1" onclick="div_1()">Enviar resposta</button>
             </div>
 
 
@@ -52,66 +48,65 @@
                 <label for="">
                     <p>Qual pilar de uma sociedade é mais importante para você?</p>
                 </label>
-                <span>Paz <input type="checkbox" id="k2" value="a"></span>
-                <span>Meio ambiente <input type="checkbox" id="e2" value="b"></span>
-                <span>Direitos <input type="checkbox" id="j2" value="c"></span>
-                <span>Tecnologia <input type="checkbox" id="c2" value="d"></span>
-                <span>liberdade <input type="checkbox" id="f2" value="e"></span>
-                <span>justiça <input type="checkbox" id="g2" value="f"></span>
-                <button onclick="div_2()">Enviar resposta</button>
+                <span>Paz <input name="questionario_dois" type="radio" id="k2" value="1"></span>
+                <span>Meio ambiente <input name="questionario_dois" type="radio" id="e2" value="2"></span>
+                <span>Direitos <input name="questionario_dois" type="radio" id="j2" value="3"></span>
+                <span>Tecnologia <input name="questionario_dois" type="radio" id="c2" value="4"></span>
+                <span>liberdade <input name="questionario_dois" type="radio" id="f2" value="5"></span>
+                <span>justiça <input name="questionario_dois" type="radio" id="g2" value="6"></span>
+                <button id="div_2" onclick="div_2()">Enviar resposta</button>
             </div>
 
             <div style="display: none;" id="pergunta_tres" class="perguntas j">
                 <label for="">
                     <p>Qual é o seu "pilar" pessoal?</p>
                 </label>
-                <span>Bondade <input type="checkbox" id="k3" value="a"></span>
-                <span>Lutar pelo que acredita <input type="checkbox" id="e3" value="b"></span>
-                <span>Trabalho <input type="checkbox" id="j3" value="c"></span>
-                <span>Futuro <input type="checkbox" id="c3" value="d"></span>
-                <span>Expressão <input type="checkbox" id="f3" value="e"></span>
-                <span>Igualdade <input type="checkbox" id="g3" value="f"></span>
-                <button onclick="div_3()">Enviar resposta</button>
+                <span>Bondade <input name="questionario_tres" type="radio" id="k3" value="1"></span>
+                <span>Lutar pelo que acredita <input name="questionario_tres" type="radio" id="e3" value="2"></span>
+                <span>Trabalho <input name="questionario_tres" type="radio" id="j3" value="3"></span>
+                <span>Futuro <input name="questionario_tres" type="radio" id="c3" value="4"></span>
+                <span>Expressão <input name="questionario_tres" type="radio" id="f3" value="5"></span>
+                <span>Igualdade <input name="questionario_tres" type="radio" id="g3" value="6"></span>
+                <button id="div_3" onclick="div_3()">Enviar resposta</button>
             </div>
 
             <div style="display: none;" id="pergunta_quatro" class="perguntas c">
                 <label for="">
                     <p>Você se considera uma pessoa:</p>
                 </label>
-                <span>Apaziguadora de conflitos <input type="checkbox" id="k4" value="a"></span>
-                <span>Melhor amiga dos animais <input type="checkbox" id="e4" value="b"></span>
-                <span>Que foca muito na vida profissional <input type="checkbox" id="j4" value="c"></span>
-                <span>Cria muitas coisas inovadoras <input type="checkbox" id="c4" value="d"></span>
-                <span>Que gosta de expressar o que pensa <input type="checkbox" id="f4" value="e"></span>
-                <span>Que acredita que todos somos iguais <input type="checkbox" id="g4" value="f"></span>
-                <button onclick="div_4()">Enviar resposta</button>
+                <span>Apaziguadora de conflitos <input name="questionario_quatro" type="radio" id="k4" value="1"></span>
+                <span>Melhor amiga dos animais <input name="questionario_quatro" type="radio" id="e4" value="2"></span>
+                <span>Que foca muito na vida profissional <input name="questionario_quatro" type="radio" id="j4" value="3"></span>
+                <span>Cria muitas coisas inovadoras <input name="questionario_quatro" type="radio" id="c4" value="4"></span>
+                <span>Que gosta de expressar o que pensa <input name="questionario_quatro" type="radio" id="f4" value="5"></span>
+                <span>Que acredita que todos somos iguais <input name="questionario_quatro" type="radio" id="g4" value="6"></span>
+                <button id="div_4" onclick="div_4()">Enviar resposta</button>
             </div>
 
             <div style="display: none;" id="pergunta_cinco" class="perguntas f">
                 <label for="">
                     <p>O que você acha mais importante nas pessoas ao seu redor?</p>
                 </label>
-                <span>Bondade <input type="checkbox" id="k5" value="a"></span>
-                <span>Amar todos os seres <input type="checkbox" id="e5" value="b"></span>
-                <span>Foco no trabalho <input type="checkbox" id="j5" value="c"></span>
-                <span>A criatividade e inovação <input type="checkbox" id="c5" value="d"></span>
-                <span>Suas maneiras de se expressar <input type="checkbox" id="f5" value="e"></span>
-                <span>Não vê diferença entre as pessoas <input type="checkbox" id="g5" value="f"></span>
-                <button onclick="div_5()">Enviar resposta</button>
+                <span>Bondade <input name="questionario_cinco" type="radio" id="k5" value="1"></span>
+                <span>Amar todos os seres <input name="questionario_cinco" type="radio" id="e5" value="2"></span>
+                <span>Foco no trabalho <input name="questionario_cinco" type="radio" id="j5" value="3"></span>
+                <span>A criatividade e inovação <input name="questionario_cinco" type="radio" id="c5" value="4"></span>
+                <span>Suas maneiras de se expressar <input name="questionario_cinco" type="radio" id="f5" value="5"></span>
+                <span>Não vê diferença entre as pessoas <input name="questionario_cinco" type="radio" id="g5" value="6"></span>
+                <button id="div_5" onclick="div_5()">Enviar resposta</button>
             </div>
 
             <div style="display: none;" id="pergunta_seis" class="perguntas g">
                 <label for="">
                     <p>Seu foco diario é:</p>
                 </label>
-                <span>Lutar pela paz <input type="checkbox" id="k6" value="a"></span>
-                <span>Lutar por um futuro melhor <input type="checkbox" id="e6" value="b"></span>
-                <span>Lutar para não me preocupar com problemas <input type="checkbox" id="j6" value="c"></span>
-                <span>Usar a tecnologia para diminuir meus problemas <input type="checkbox" id="c6" value="d"></span>
-                <span>Poder expressar minha opinião sem medo de repressão <input type="checkbox" id="f6"
-                        value="e"></span>
-                <span>Lutar contra injustiças <input type="checkbox" id="g6" value="f"></span>
-                <button onclick="div_final()">Finalizar questionario</button>
+                <span>Lutar pela paz <input name="questionario_seis" type="radio" id="k6" value="1"></span>
+                <span>Lutar por um futuro melhor <input name="questionario_seis" type="radio" id="e6" value="2"></span>
+                <span>Lutar para não me preocupar com problemas <input name="questionario_seis" type="radio" id="j6" value="3"></span>
+                <span>Usar a tecnologia para diminuir meus problemas <input name="questionario_seis" type="radio" id="c6" value="4"></span>
+                <span>Poder expressar minha opinião sem medo de repressão <input name="questionario_seis" type="radio" id="f6"value="5"></span>
+                <span>Lutar contra injustiças <input name="questionario_seis" type="radio" id="g6" value="6"></span>
+                <button id="div_6" onclick="div_final()">Finalizar questionario</button>
 
             </div>
             

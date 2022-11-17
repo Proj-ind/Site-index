@@ -1,4 +1,5 @@
 
+var valor = [];
 
 function div_1() {
     pergunta_um.style.display = "none"
@@ -25,50 +26,59 @@ function div_5() {
     pergunta_seis.style.display = "flex"
 }
 
-lista_tribo_k = []
-lista_tribo_e = []
 function div_final() {
-    const kid = k1.value;
-    const kid_2 = k2.value;
-    const kid_3 = k3.value;
-    const kid_4 = k4.value;
-    const kid_5 = k5.value;
-    const kid_6 = k6.value;
+   var kidness = Number(k1.value) + 
+   Number(k2.value) +
+   Number(k3.value) +
+   Number(k4.value) +
+   Number(k5.value) +
+   Number(k6.value); 
 
-    const eco = e1.value;
-    const  eco_2 = e2.value;
-    const  eco_3 = e3.value;
-    const  eco_4 = e4.value
-    const  eco_5 = e5.value
-    const  eco_6 = e6.value
-    // var kidness =  {
-    //     k1,
-    //     k2,
-    //     k3,
-    //     k4,
-    //     k5,
-    //     k6
-    // }
+var eco = Number(e1.value) +
+Number(e2.value) +
+Number(e3.value) +
+Number(e4.value) +
+Number(e5.value) +
+Number(e6.value);
 
-    // var eco = {
-    //     e1,
-    //     e2,
-    //     e3,
-    //     e4,
-    //     e5,
-    //     e6
-    // }
-    
+var junk = Number(j1.value) +
+Number(j2.value) +
+Number(j3.value) +
+Number(j4.value) +
+Number(j5.value) +
+Number(j6.value);
 
-    lista_tribo_k.push(kid, kid_2, kid_3, kid_4, kid_5, kid_6)
-    lista_tribo_e.push(eco, eco_2, eco_3, eco_4, eco_5, eco_6)
-        
-        if (lista_tribo_k.lenght < lista_tribo_e.lenght) {
-         pergunta_seis.style.display = "none"
-        resposta_k.style.display = "flex"
-        } else {
-            pergunta_seis.style.display = "none"
-            resposta_e.style.display = "flex"
-        }
+var cyber = Number(c1.value) +
+Number(c2.value) +
+Number(c3.value) +
+Number(c4.value) +
+Number(c5.value) +
+Number(c6.value);
+
+var freedom = Number(f1.value) +
+Number(f2.value) +
+Number(f3.value) +
+Number(f4.value) +
+Number(f5.value) +
+Number(f6.value);
+
+
+var goverment = Number(g1.value) +
+Number(g2.value) +
+Number(g3.value) +
+Number(g4.value) +
+Number(g5.value) +
+Number(g6.value);
+
+var total = (kidness + eco + junk + cyber + freedom + goverment) /2 ;
+
+valor.push(kidness, eco, junk, cyber, freedom, goverment)
+if ( valor > 10) {
+    pergunta_seis.style.display = "none"
+    resposta_k.style.display = "flex"
+} else if (valor < 10){
+    pergunta_seis.style.display = "none"
+    resposta_e.style.display = "flex"
 }
-
+console.log(valor)
+}

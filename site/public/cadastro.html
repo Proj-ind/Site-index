@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,42 +13,44 @@
     <link rel="stylesheet" href="./css/chromatica-gerais.css">
     <title>Chromatica</title>
 </head>
+
 <body>
 
-<main>
-<div class="corpo">
-<div class="cadastro">
-    <p>My name isn't Alice
-        But I'll keep looking, I'll keep looking for wonderland</p>
-    </div>
-        <div class="container">
-            <label for="input_nome">Nome<p> *</p></label>
-            <input type="text" name="nome" id="input_nome" placeholder="Seu nome">
+    <main>
+        <div class="corpo">
+            <div class="cadastro">
+                <p>My name isn't Alice
+                    But I'll keep looking, I'll keep looking for wonderland</p>
+            </div>
+            <div class="container">
+                <label for="input_nome">Nome<p> *</p></label>
+                <input type="text" name="nome" id="input_nome" placeholder="Seu nome">
+            </div>
+            <div class="container">
+                <label for="input_sobrenome">Sobrenome<p> *</p></label>
+                <input type="text" name="sobrenome" id="input_sobrenome" placeholder="Seu sobrenome">
+            </div>
+            <div class="container">
+                <label for="input_email">E-mail<p> *</p></label>
+                <input type="text" name="email" id="input_email" placeholder="email@email.com">
+            </div>
+            <div class="container">
+                <label for="input_senha">Senha<p> *</p></label>
+                <input type="password" name="senha" id="input_senha" placeholder="*********">
+            </div>
+            <div class="container a">
+                <label for="input_confirmar_senha">Confirmar senha<p> *</p></label>
+                <input type="password" name="confirmar_senha" id="input_confirmar_senha" placeholder="*********">
+            </div>
+            <div class="conta"><span>Já tem uma</span><a href="./login.html"> conta</a></div>
+            <button onclick="cadastrar()">
+                Cadastre-se
+            </button>
         </div>
-        <div class="container">
-            <label for="input_sobrenome">Sobrenome<p> *</p></label>
-            <input type="text" name="sobrenome" id="input_sobrenome" placeholder="Seu sobrenome">
-        </div>
-        <div class="container">
-            <label for="input_email">E-mail<p> *</p></label>
-            <input type="text" name="email" id="input_email" placeholder="email@email.com">
-        </div>
-        <div class="container">
-            <label for="input_senha">Senha<p> *</p></label>
-            <input type="password" name="senha" id="input_senha" placeholder="*********">
-        </div>
-        <div class="container a">
-            <label for="input_confirmar_senha">Confirmar senha<p> *</p></label>
-            <input type="password" name="confirmar_senha" id="input_confirmar_senha" placeholder="*********">
-        </div>
-        <div class="conta"><span>Já tem uma</span><a href="./login.html"> conta</a></div>
-<button onclick="cadastrar()">
-Cadastre-se
-</button>
-</div>
-</main>
+    </main>
 
 </body>
+
 </html>
 
 
@@ -62,11 +65,16 @@ Cadastre-se
         var senhaVar = input_senha.value;
         var confirmacaoSenhaVar = input_confirmar_senha.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" ||  sobrenomeVar == "" || confirmacaoSenhaVar == "") {
-            
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || confirmacaoSenhaVar == "") {
+            alert(`Todos os campos precisam ser preenchidos`)
             return false;
-        }
-        else {
+        } else if (emailVar.indexOf("@") == -1) {
+            alert(`Email inválido`)
+        } else if (senhaVar.length < 8) {
+            alert(`senha inválida`)
+        } else if (confirmacaoSenhaVar != senhaVar) {
+            alert(`As senhas precisam ser iguais`)
+        } else {
             setInterval(sumirMensagem, 5000)
         }
 
@@ -91,20 +99,20 @@ Cadastre-se
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "./login.html";
                 }, "2000")
-                
+
                 limparFormulario();
-            
+
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-        
+
         });
 
         return false;
