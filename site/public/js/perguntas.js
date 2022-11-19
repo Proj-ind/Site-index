@@ -1,5 +1,4 @@
 
-var valor = [];
 
 function div_1() {
     pergunta_um.style.display = "none"
@@ -26,59 +25,66 @@ function div_5() {
     pergunta_seis.style.display = "flex"
 }
 
+var valor = [];
 function div_final() {
-   var kidness = Number(k1.value) + 
-   Number(k2.value) +
-   Number(k3.value) +
-   Number(k4.value) +
-   Number(k5.value) +
-   Number(k6.value); 
 
-var eco = Number(e1.value) +
-Number(e2.value) +
-Number(e3.value) +
-Number(e4.value) +
-Number(e5.value) +
-Number(e6.value);
-
-var junk = Number(j1.value) +
-Number(j2.value) +
-Number(j3.value) +
-Number(j4.value) +
-Number(j5.value) +
-Number(j6.value);
-
-var cyber = Number(c1.value) +
-Number(c2.value) +
-Number(c3.value) +
-Number(c4.value) +
-Number(c5.value) +
-Number(c6.value);
-
-var freedom = Number(f1.value) +
-Number(f2.value) +
-Number(f3.value) +
-Number(f4.value) +
-Number(f5.value) +
-Number(f6.value);
+    var p1 = document.querySelector('input[name="apoia"]:checked').value;
+    var p2 = document.querySelector('input[name="paz"]:checked').value;
+    var p3 = document.querySelector('input[name="bondade"]:checked').value;
+    var p4 = document.querySelector('input[name="conflitos"]:checked').value;
+    var p5 = document.querySelector('input[name="foco"]:checked').value;
+    var p6 = document.querySelector('input[name="luta"]:checked').value;
 
 
-var goverment = Number(g1.value) +
-Number(g2.value) +
-Number(g3.value) +
-Number(g4.value) +
-Number(g5.value) +
-Number(g6.value);
+    valor.push(p1, p2, p3, p4, p5, p6)
 
-var total = (kidness + eco + junk + cyber + freedom + goverment) /2 ;
 
-valor.push(kidness, eco, junk, cyber, freedom, goverment)
-if ( valor > 10) {
-    pergunta_seis.style.display = "none"
-    resposta_k.style.display = "flex"
-} else if (valor < 10){
-    pergunta_seis.style.display = "none"
-    resposta_e.style.display = "flex"
-}
-console.log(valor)
+    var kidness = 0;
+    var eco = 0;
+    var junk = 0;
+    var cyber = 0;
+    var free = 0;
+    var gov = 0;
+
+    for (var contador = 0;
+        contador < valor.length;
+        contador++) {
+
+        if (valor[contador] == "kid") {
+            kidness++;
+        } else if (valor[contador] == "eco") {
+            eco++;
+        } else if (valor[contador] == "junk"){
+            junk++;
+        } else if (valor[contador] == "cyber"){
+            cyber++;
+        } else if(valor[contador] == "free"){
+            free++;
+        } else if(valor[contador] == "gov"){
+            gov++;
+        }
+    }
+
+    console.log(valor)
+
+    if (kidness > junk && kidness > cyber && kidness > free && kidness > gov && kidness > eco) {
+        pergunta_seis.style.display = "none"
+        resposta_k.style.display = "flex"
+    } else if( eco > kidness && eco > junk && eco > cyber && eco > free && eco > gov) {
+        pergunta_seis.style.display = "none"
+        resposta_e.style.display = "flex"
+    } else if(junk > kidness && junk > eco && junk > free && junk > gov && junk > cyber){
+        pergunta_seis.style.display = "none"
+        resposta_j.style.display = "flex"
+    } else if (cyber > kidness && cyber > eco && cyber > free && cyber > gov && cyber > junk){
+        pergunta_seis.style.display = "none"
+        resposta_c.style.display = "flex"
+    } else if (free > kidness && free > junk && free > eco && free > cyber && free > gov){
+        pergunta_seis.style.display = "none"
+        resposta_f.style.display = "flex"
+    } else if (gov > kidness && gov > eco && gov > junk && gov > cyber && gov > free){
+        pergunta_seis.style.display = "none"
+        resposta_g.style.display = "flex"
+    } 
+
 }

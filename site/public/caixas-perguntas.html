@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/assets/logo2.png" type="image/x-icon">
+     <link rel="shortcut icon" href="./assets/assets/logo2.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
@@ -13,7 +12,10 @@
     <link rel="stylesheet" href="./css/chromatica-gerais.css">
     <title>Chromatica</title>
 </head>
-
+<body>
+    
+</body>
+</html>
 <body>
     <header>
         <div style="display: flex; justify-content:center;" class="header_chromatica">
@@ -34,26 +36,26 @@
                 <label for="">
                     <p>Qual é a sua melhor qualidade?</p>
                 </label>
-                <span>Gentileza <input name="questionario" type="radio" id="k1" value="1"></span>
-                <span>Apoiador <input name="questionario" type="radio" id="e1" value="2"></span>
-                <span>Coragem <input name="questionario" type="radio" id="j1" value="3"></span>
-                <span>Criatividade <input name="questionario" type="radio" id="c1" value="4"></span>
-                <span>Empatia <input name="questionario" type="radio" id="f1" value="5"></span>
-                <span>Disciplina <input name="questionario" type="radio" id="g1" value="6"></span>
+                <span>Gentileza <input  type="radio" id="k1" name="apoia" value="kid"></span>
+                <span>Apoiador <input type="radio" id="e1" name="apoia" value="eco"></span>
+                <span>Coragem <input  type="radio" id="j1" name="apoia" value="junk"></span>
+                <span>Criatividade <input  type="radio" name="apoia" id="c1" value="cyber"></span>
+                <span>Empatia <input  type="radio" id="f1" name="apoia" value="free"></span>
+                <span>Disciplina <input  type="radio" id="g1" name="apoia" value="gov"></span>
                 <button id="div_1" onclick="div_1()">Enviar resposta</button>
             </div>
 
 
             <div style="display: none;" id="pergunta_dois" class="perguntas e">
                 <label for="">
-                    <p>Qual pilar de uma sociedade é mais importante para você?</p>
+                    <p>Na sociedade o que é importante para você?</p>
                 </label>
-                <span>Paz <input name="questionario_dois" type="radio" id="k2" value="1"></span>
-                <span>Meio ambiente <input name="questionario_dois" type="radio" id="e2" value="2"></span>
-                <span>Direitos <input name="questionario_dois" type="radio" id="j2" value="3"></span>
-                <span>Tecnologia <input name="questionario_dois" type="radio" id="c2" value="4"></span>
-                <span>liberdade <input name="questionario_dois" type="radio" id="f2" value="5"></span>
-                <span>justiça <input name="questionario_dois" type="radio" id="g2" value="6"></span>
+                <span>Paz <input type="radio" id="k2" name="paz" value="kid"></span>
+                <span>Meio ambiente <input type="radio" id="e2" name="paz" value="eco"></span>
+                <span>Direitos <input type="radio" id="j2" name="paz" value="junk"></span>
+                <span>Tecnologia <input type="radio" id="c2" name="paz" value="cyber"></span>
+                <span>liberdade <input type="radio" id="f2" name="paz" value="free"></span>
+                <span>justiça <input type="radio" id="g2" name="paz" value="gov"></span>
                 <button id="div_2" onclick="div_2()">Enviar resposta</button>
             </div>
 
@@ -61,12 +63,12 @@
                 <label for="">
                     <p>Qual é o seu "pilar" pessoal?</p>
                 </label>
-                <span>Bondade <input name="questionario_tres" type="radio" id="k3" value="1"></span>
-                <span>Lutar pelo que acredita <input name="questionario_tres" type="radio" id="e3" value="2"></span>
-                <span>Trabalho <input name="questionario_tres" type="radio" id="j3" value="3"></span>
-                <span>Futuro <input name="questionario_tres" type="radio" id="c3" value="4"></span>
-                <span>Expressão <input name="questionario_tres" type="radio" id="f3" value="5"></span>
-                <span>Igualdade <input name="questionario_tres" type="radio" id="g3" value="6"></span>
+                <span>Bondade <input type="radio" id="k3" name="bondade" value="kid"></span>
+                <span>Lutar pelo que acredita <input type="radio" id="e3"name="bondade" value="eco"></span>
+                <span>Trabalho <input type="radio" id="j3" name="bondade" value="junk"></span>
+                <span>Futuro <input type="radio" id="c3" name="bondade" value="cyber"></span>
+                <span>Expressão <input type="radio" id="f3" name="bondade" value="free"></span>
+                <span>Igualdade <input type="radio" id="g3" name="bondade" value="gov"></span>
                 <button id="div_3" onclick="div_3()">Enviar resposta</button>
             </div>
 
@@ -74,12 +76,12 @@
                 <label for="">
                     <p>Você se considera uma pessoa:</p>
                 </label>
-                <span>Apaziguadora de conflitos <input name="questionario_quatro" type="radio" id="k4" value="1"></span>
-                <span>Melhor amiga dos animais <input name="questionario_quatro" type="radio" id="e4" value="2"></span>
-                <span>Que foca muito na vida profissional <input name="questionario_quatro" type="radio" id="j4" value="3"></span>
-                <span>Cria muitas coisas inovadoras <input name="questionario_quatro" type="radio" id="c4" value="4"></span>
-                <span>Que gosta de expressar o que pensa <input name="questionario_quatro" type="radio" id="f4" value="5"></span>
-                <span>Que acredita que todos somos iguais <input name="questionario_quatro" type="radio" id="g4" value="6"></span>
+                <span>Apaziguadora de conflitos <input type="radio" id="k4" name="conflitos" value="kid"></span>
+                <span>Que é "melhor amiga" dos animais <input type="radio" id="e4" name="conflitos" value="eco"></span>
+                <span>Que foca muito na vida profissional <input type="radio"name="conflitos" id="j4" value="junk"></span>
+                <span>Cria muitas coisas inovadoras <input type="radio" id="c4" name="conflitos" value="cyber"></span>
+                <span>Que gosta de expressar o que pensa <input type="radio" id="f4" name="conflitos" value="free"></span>
+                <span>Que acredita que todos somos iguais <input type="radio" id="g4" name="conflitos" value="gov"></span>
                 <button id="div_4" onclick="div_4()">Enviar resposta</button>
             </div>
 
@@ -87,12 +89,12 @@
                 <label for="">
                     <p>O que você acha mais importante nas pessoas ao seu redor?</p>
                 </label>
-                <span>Bondade <input name="questionario_cinco" type="radio" id="k5" value="1"></span>
-                <span>Amar todos os seres <input name="questionario_cinco" type="radio" id="e5" value="2"></span>
-                <span>Foco no trabalho <input name="questionario_cinco" type="radio" id="j5" value="3"></span>
-                <span>A criatividade e inovação <input name="questionario_cinco" type="radio" id="c5" value="4"></span>
-                <span>Suas maneiras de se expressar <input name="questionario_cinco" type="radio" id="f5" value="5"></span>
-                <span>Não vê diferença entre as pessoas <input name="questionario_cinco" type="radio" id="g5" value="6"></span>
+                <span>Resiliencia <input type="radio" id="k5" name="foco" value="kid"></span>
+                <span>Amar todos os seres <input type="radio" id="e5" name="foco" value="eco"></span>
+                <span>Foco no trabalho <input type="radio" id="j5" name="foco" value="junk"></span>
+                <span>A criatividade e inovação <input type="radio" name="foco" id="c5" value="cyber"></span>
+                <span>Suas maneiras de se expressar <input type="radio" name="foco" id="f5" value="free"></span>
+                <span>Não vê diferença entre as pessoas <input type="radio" name="foco" id="g5" value="gov"></span>
                 <button id="div_5" onclick="div_5()">Enviar resposta</button>
             </div>
 
@@ -100,12 +102,12 @@
                 <label for="">
                     <p>Seu foco diario é:</p>
                 </label>
-                <span>Lutar pela paz <input name="questionario_seis" type="radio" id="k6" value="1"></span>
-                <span>Lutar por um futuro melhor <input name="questionario_seis" type="radio" id="e6" value="2"></span>
-                <span>Lutar para não me preocupar com problemas <input name="questionario_seis" type="radio" id="j6" value="3"></span>
-                <span>Usar a tecnologia para diminuir meus problemas <input name="questionario_seis" type="radio" id="c6" value="4"></span>
-                <span>Poder expressar minha opinião sem medo de repressão <input name="questionario_seis" type="radio" id="f6"value="5"></span>
-                <span>Lutar contra injustiças <input name="questionario_seis" type="radio" id="g6" value="6"></span>
+                <span>Lutar pela paz <input type="radio" id="k6" name="luta" value="kid"></span>
+                <span>Lutar por um futuro melhor <input type="radio" id="e6" name="luta" value="eco"></span>
+                <span>Lutar para não me preocupar com problemas <input type="radio" name="luta" id="j6" value="junk"></span>
+                <span>Usar a tecnologia para diminuir meus problemas <input type="radio" name="luta" id="c6" value="cyber"></span>
+                <span>Poder expressar minha opinião sem medo de repressão <input type="radio" name="luta" id="f6"value="free"></span>
+                <span>Lutar contra injustiças <input type="radio" id="g6" name="luta" value="gov"></span>
                 <button id="div_6" onclick="div_final()">Finalizar questionario</button>
 
             </div>
@@ -166,7 +168,7 @@
                 </div>
             </div>
 
-            <div style="display:none;" id="resposta_g" class="respostas g">
+            <div style="display:none;" id="resposta_g" class="respostas_g">
                 <div class="img">
                     <img src="./assets/assets/goverments-offc.png" alt="tribos de chromatica">
                 </div>
