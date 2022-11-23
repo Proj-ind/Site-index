@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/chromatica.css">
     <link rel="stylesheet" href="./css/chromatica-gerais.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Chromatica</title>
 </head>
 
@@ -73,7 +74,7 @@
             <div class="txt bin s">
                 <b>JUNKYARD SCAVENGERS</b>
                 <p>Uma das primeiras tribos a surgirem no universo Chromatica, eles estão ligado aos direitos
-                    trabalhistas dentro desse universo.</p>
+                    trabalhistas, e para que todos tenham o direito ao trabalho dentro desse universo.</p>
             </div>
         </div>
         <div class="tribos c">
@@ -99,12 +100,15 @@
             </div>
         </div>
 
-        <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
+        <div class="chart">
+            <canvas id="myChart"></canvas>
+          </div>
+          
 
         <div class="conteudo-final">
             <div class="caixa-final">
                 <b>Faça seu cadastro e  descubra qual é sua tribo</b>
-                <div class="btn"><a href="./cadastro.html">Descobir tribo</a></div>
+                <div class="btn"><a href="./cadastro.html">Descobrir tribo</a></div>
             </div>
         </div>
     </div>
@@ -118,48 +122,32 @@
     </footer>
 </body>
 
-<script>
-    const labels = [
-      'KINDNESS PUNKS',
-      'ECO WARRIORS',
-      'JUNKYARD SCAVENGERS',
-      'CYBER KIDS',
-      'FREEDOM FIGHTERS',
-      'GOVERNMENT OFFICIALS',
-    ];
+  </html>
+
+  <script>
+    const ctx = document.getElementById('myChart');
   
-    const data = {
-      labels: labels,
-      datasets: [{
-        data: [30, 30, 30, 30, 30, 30],
-        
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
     backgroundColor: [
-      '#FF00A8',
-      '#1D4908',
-      'rgb(01, 00, 00)',
-      '#FFC940',
-      '#4B58CA',
-      '#DB4444'
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
     ],
     hoverOffset: 4
-      }]
-    };
-  
-    const config = {
-      type: 'pie',
-      data: data,
+  }],
+      },
       options: {
-        plugins: {}
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
       }
-    };
-  
-
-    const myChart = new Chart(
-      document.getElementById('Chart_chromatica'),
-      config
-    );
-  
-
-</script>
-
-  </html>
+    });
+  </script>

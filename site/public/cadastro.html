@@ -24,23 +24,23 @@
             </div>
             <div class="container">
                 <label for="input_nome">Nome<p> *</p></label>
-                <input type="text" name="nome" id="input_nome" placeholder="Seu nome">
+                <input type="text"  onkeyup="verificar_nome()" name="nome" id="input_nome" placeholder="Seu nome">
             </div>
             <div class="container">
                 <label for="input_sobrenome">Sobrenome<p> *</p></label>
-                <input type="text" name="sobrenome" id="input_sobrenome" placeholder="Seu sobrenome">
+                <input type="text"  onkeyup="verificar_sobrenome()" name="sobrenome" id="input_sobrenome" placeholder="Seu sobrenome">
             </div>
             <div class="container">
                 <label for="input_email">E-mail<p> *</p></label>
-                <input type="text" name="email" id="input_email" placeholder="email@email.com">
+                <input type="text"  onkeyup="verificar_email()" name="email" id="input_email" placeholder="email@email.com">
             </div>
             <div class="container">
                 <label for="input_senha">Senha<p> *</p></label>
-                <input type="password" name="senha" id="input_senha" placeholder="*********">
+                <input type="password"  onkeyup="verificar_senha()" name="senha" id="input_senha" placeholder="*********">
             </div>
             <div class="container a">
                 <label for="input_confirmar_senha">Confirmar senha<p> *</p></label>
-                <input type="password" name="confirmar_senha" id="input_confirmar_senha" placeholder="*********">
+                <input type="password" onkeyup="confirmar()" name="confirmar_senha" id="input_confirmar_senha" placeholder="*********">
             </div>
             <div class="conta"><span>Já tem uma</span><a href="./login.html"> conta</a></div>
             <button onclick="cadastrar()">
@@ -55,6 +55,57 @@
 
 
 <script>
+
+function verificar_nome() {
+        var nome = input_nome.value;
+        if (nome == "") {
+            document.getElementById("input_nome").style.borderColor = "black"
+        } else if (nome.length >= 3) {
+            document.getElementById("input_nome").style.borderColor = "green"
+        } else {document.getElementById("input_nome").style.borderColor = "red"}
+    }
+    function verificar_sobrenome() {
+        var sobrenome = input_sobrenome.value;
+
+        if (sobrenome == "") {
+            document.getElementById("input_sobrenome").style.borderColor = "black"
+        } else if (sobrenome.length >= 3) {
+            document.getElementById("input_sobrenome").style.borderColor = "green"
+        } else {document.getElementById("input_sobrenome").style.borderColor = "red"}
+    }
+    function verificar_email(){
+        var email = input_email.value;
+
+        if (email == "") {
+            document.getElementById("input_email").style.borderColor = "black"
+        } else if (email.indexOf("@") > -1 && email.indexOf(".") > -1) {
+            document.getElementById("input_email").style.borderColor = "green";
+        } else {document.getElementById("input_email").style.borderColor = "red";}
+    }
+
+    function verificar_senha(){
+        var senha = input_senha.value;
+        
+        if (senha == "") {
+            document.getElementById("input_senha").style.borderColor = "black";
+        } else if (senha.length < 8) {
+            document.getElementById("input_senha").style.borderColor = "red";
+        } else {document.getElementById("input_senha").style.borderColor = "green";}
+        confirmar_senha()
+    }
+
+    function confirmar() {
+        var senha = input_senha.value;
+        var senha_confirm = input_confirmar_senha.value;
+
+        if (senha_confirm == "") {
+            document.getElementById("input_confirmar_senha").style.borderColor = "black";
+        } else if (senha == senha_confirm) {
+            document.getElementById("input_confirmar_senha").style.borderColor = "green";
+        } else {document.getElementById("input_confirmar_senha").style.borderColor = "red";}
+    }
+    
+
     function cadastrar() {
 
         //Recupere o valor da nova input pelo nome do id
@@ -68,7 +119,7 @@
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || sobrenomeVar == "" || confirmacaoSenhaVar == "") {
             alert(`Todos os campos precisam ser preenchidos`)
             return false;
-        } else if (emailVar.indexOf("@") == -1) {
+        } else if (emailVar.indexOf("@") > -1 || emailVar.indexOf(".") > -1 ) {
             alert(`Email inválido`)
         } else if (senhaVar.length < 8) {
             alert(`senha inválida`)
@@ -97,15 +148,15 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                //  cardErro.style.display = "block";
 
-                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                //  mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                setTimeout(() => {
-                    window.location = "./login.html";
-                }, "2000")
+            
+                    window.location = "login.html";
+        
 
-                limparFormulario();
+                 // limparFormulario();
 
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
