@@ -1,3 +1,4 @@
+// const { set } = require("express/lib/application")
 
 
 function div_1() {
@@ -45,6 +46,8 @@ function div_final() {
     var cyber = 0;
     var free = 0;
     var gov = 0;
+
+
 
     for (var contador = 0;
         contador < valor.length;
@@ -94,20 +97,30 @@ function div_final() {
 
 };
 
-const cadastrarTribo = require("../../src/models/usuarioModel");
-
-function cadastrTribo(cadastrarTribo) {
+var idusuario = sessionStorage.idUsuario;
+// const {cadastrarTribo} = require("../../src/models/usuarioModel");
+function cadastrarTribo() {
     
+
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    if (fk == 0) {
-        alert(`Todos os campos precisam ser preenchidos`)
+ 
+
+    if (fk == "") {
+        cardErro.style.display = "block"
+        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
         return false;
-    } else {
-        setInterval(sumirMensagem, 5000)
+    }
+    else {
+        /* setInterval(sumirMensagem, 5000)*/
+        
+        
         // Enviando o valor da nova input
-    fetch("/usuarios", {
-        method: "POST",
+        console.log(fk);
+        console.log(idusuario);
+        fetch("/usuarios/cadastrarTribo", {
+        method: "put",
         headers: {
             "Content-Type": "application/json"
         },
@@ -115,17 +128,84 @@ function cadastrTribo(cadastrarTribo) {
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             fkTriboUserServer: fk,
+            idusuarioServer: idusuario
         })
     }).then(function (resposta) {
-
+        
         console.log("resposta: ", resposta);
-
+        
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+            
+            /*     setTimeout(() => {
+                window.location = "login.html";
+            })*/
+            
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        
-    })}};
+       
+    });
+
+    return false;
+}}
+
+function resultado() {
     
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    };
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+ 
+
+    if (fk == "") {
+        cardErro.style.display = "block"
+        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        return false;
+    }
+    else {
+        /* setInterval(sumirMensagem, 5000)*/
+        
+        
+        // Enviando o valor da nova input
+        console.log(fk);
+        console.log(idusuario);
+        fetch("/usuarios/resultado", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            fkTriboUser2Server: fk,
+            fkusuarioServer: idusuario
+        })
+    }).then(function (resposta) {
+        
+        console.log("resposta: ", resposta);
+        
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+            
+            /*     setTimeout(() => {
+                window.location = "login.html";
+            })*/
+            
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+       
+    });
+
+    return false;
+}}
+
+/*function sumirMensagem() {
+    cardErro.style.display = "none"
+}*/
     

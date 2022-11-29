@@ -32,12 +32,12 @@ function cadastrar(nome, sobrenome, email, senha) {
 }
 
 function cadastrarTribo(idusuario, fktribo) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", idusuario, fktribo);
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrarTribo():", idusuario, fktribo);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        update usuario set fkTriboUser = ${fktribo} where idUsuario ${idusuario};
+    update usuario set fkTriboUser = ${fktribo} where idUsuario = ${idusuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -45,9 +45,23 @@ function cadastrarTribo(idusuario, fktribo) {
 
 
 
+function resultado(fktribo2, fkusuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function resultado():", fkusuario, fktribo2);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.{
+    var instrucao = `
+        INSERT INTO resposta (fktribo, fkusuario) VALUES ('${fktribo2}', '${fkusuario}');
+    `
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    cadastrarTribo
+    cadastrarTribo,
+    resultado
 };
