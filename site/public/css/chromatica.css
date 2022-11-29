@@ -159,13 +159,21 @@
     text-align: center;
 }
 
-.chart{
-    background-image: url(../assets/assets/ladygaga3.jpg);
-    position: revert;
-    height: 620px;
-    width: 100%;
+.imgchart{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    background-color: #ffb3e0;
+}
+
+.imgchart .img{
+    height: 75vh;
+    background-image: url("../assets/assets/lg5.jpg");
+    width: 72vw;
+    background-size: cover;
     background-attachment: fixed;
+}
+
+.chart{
+    height: 75vh;
+    width: 55vw;
 }

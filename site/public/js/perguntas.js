@@ -26,6 +26,7 @@ function div_5() {
 }
 
 var valor = [];
+var fk = 0;
 function div_final() {
 
     var p1 = document.querySelector('input[name="apoia"]:checked').value;
@@ -37,7 +38,6 @@ function div_final() {
 
 
     valor.push(p1, p2, p3, p4, p5, p6)
-
 
     var kidness = 0;
     var eco = 0;
@@ -66,25 +66,66 @@ function div_final() {
     }
 
     console.log(valor)
-
     if (kidness > junk && kidness > cyber && kidness > free && kidness > gov && kidness > eco) {
+        fk = 1;
         pergunta_seis.style.display = "none"
         resposta_k.style.display = "flex"
     } else if( eco > kidness && eco > junk && eco > cyber && eco > free && eco > gov) {
+        fk = 2;
         pergunta_seis.style.display = "none"
         resposta_e.style.display = "flex"
     } else if(junk > kidness && junk > eco && junk > free && junk > gov && junk > cyber){
+        fk = 3;
         pergunta_seis.style.display = "none"
         resposta_j.style.display = "flex"
     } else if (cyber > kidness && cyber > eco && cyber > free && cyber > gov && cyber > junk){
+        fk = 4;
         pergunta_seis.style.display = "none"
         resposta_c.style.display = "flex"
     } else if (free > kidness && free > junk && free > eco && free > cyber && free > gov){
+        fk = 5;
         pergunta_seis.style.display = "none"
         resposta_f.style.display = "flex"
     } else if (gov > kidness && gov > eco && gov > junk && gov > cyber && gov > free){
+        fk = 6;
         pergunta_seis.style.display = "none"
         resposta_g.style.display = "flex"
     } 
 
-}
+};
+
+const cadastrarTribo = require("../../src/models/usuarioModel");
+
+function cadastrTribo(cadastrarTribo) {
+    
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    if (fk == 0) {
+        alert(`Todos os campos precisam ser preenchidos`)
+        return false;
+    } else {
+        setInterval(sumirMensagem, 5000)
+        // Enviando o valor da nova input
+    fetch("/usuarios", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            fkTriboUserServer: fk,
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        
+    })}};
+    
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    };
+    
