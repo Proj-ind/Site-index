@@ -1,15 +1,15 @@
-main{
-    height: 100vh;
+main {
+    height: 95vh;
     background-image: url(../assets/assets/chromatica.jpg);
     display: flex;
     background-size: cover;
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
- 
-.questao p{
+
+.questao p {
     font-family: 'iceland', Arial;
-    font-size: 30px; 
+    font-size: 30px;
     color: white;
     margin: 6px;
 }
@@ -22,17 +22,17 @@ main{
 }
 
 
-.perguntas{
+.perguntas {
     box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     -webkit-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     width: 85vh;
     padding: 5vh;
-        display: flex;
+    display: flex;
     flex-direction: column;
 }
 
-.perguntas label{
+.perguntas label {
     font-family: 'iceland', Arial;
     font-size: 30px;
     margin-bottom: 3vh;
@@ -40,36 +40,41 @@ main{
     justify-content: center
 }
 
-.perguntas span{
+.perguntas span {
     font-family: 'iceland', Arial;
     font-size: 25px;
 }
 
-.perguntas.k{
+.perguntas.k {
     background-color: #FF00A8
 }
-.perguntas.e{
+
+.perguntas.e {
     background-color: #1D4908;
 }
-.perguntas.j{
+
+.perguntas.j {
     background-color: #d5d9dd;
 }
-.perguntas.c{
+
+.perguntas.c {
     background-color: #FFC940;
 }
-.perguntas.f{
+
+.perguntas.f {
     background-color: #4B58CA;
 }
-.perguntas.g{
+
+.perguntas.g {
     background-color: #DB4444;
 }
 
-.span input{
+.span input {
     border-radius: 0px;
     color: rgba(0, 0, 0, 0.3);
 }
 
-  button {
+button {
     margin: 17px 1px;
     cursor: pointer;
     background-color: black;
@@ -77,55 +82,62 @@ main{
     font-family: 'iceland', Arial;
     color: white;
     font-size: 29px;
-  }
- 
-.respostas{
+}
+
+.respostas {
     box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     -webkit-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 10px 11px 43px -1px rgba(0, 0, 0, 0.73);
     width: 85vh;
-    padding: 5vh;
-        display: flex;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.personalidade{
-  padding-left: 25px;
+.personalidade {
+    padding-left: 25px;
 }
 
-.personalidade{
+.personalidade {
     display: flex;
     font-family: 'iceland', Arial;
     flex-direction: column;
 }
 
-.personalidade p{
+.personalidade p {
     font-size: 20px;
 }
 
-.personalidade b{
+.personalidade b {
     font-size: x-large;
 }
 
-.personalidade span{
+.personalidade span {
     font-size: 20px;
     margin-top: 10px;
 }
 
-.respostas.k{
+.respostas.k {
     background-color: #FF00A8
 }
-.respostas.e{
+
+.respostas.e {
     background-color: #1D4908;
 }
-.respostas.j{
+
+.respostas.j {
     background-color: #d5d9dd;
 }
-.respostas.c{
+
+.respostas.c {
     background-color: #FFC940;
 }
-.respostas.f{
+
+.respostas.f {
     background-color: #4B58CA;
 }
-.respostas.g{
+
+.respostas.g {
     background-color: #DB4444;
 }

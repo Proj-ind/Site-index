@@ -1,0 +1,25 @@
+.nome{
+    background-color: #da17a0;
+    display: flex;
+  justify-content: center;
+}
+
+.nome img{
+    height: 100%;
+    width: 100%;
+}
+.nome .img{
+    height: 60%;
+    width: 40%;
+}
+
+
+.mapa{
+    height: 65vh;
+   display: flex;
+}
+
+.mapa img{
+    height: 65vh;
+    width: 35vw;
+}

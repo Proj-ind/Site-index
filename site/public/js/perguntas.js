@@ -104,7 +104,7 @@ function cadastrarTribo() {
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
- 
+ resultado()
 
     if (fk == "") {
         cardErro.style.display = "block"
@@ -188,11 +188,9 @@ function resultado() {
         console.log("resposta: ", resposta);
         
         if (resposta.ok) {
-            cardErro.style.display = "block";
             
-            /*     setTimeout(() => {
-                window.location = "login.html";
-            })*/
+                         window.location = "saibamais.html";
+            
             
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
