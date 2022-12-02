@@ -15,10 +15,10 @@
 }
 .texto .titulo{
    margin-bottom: 14px;
-   font-size: 30px;
+   font-size: 45px;
 }
 .texto .txt{
-   font-size: 20px;
+   font-size: 25px;
 }
 
 
@@ -84,7 +84,13 @@
 }
 .remix .texto{
 display: flex;
+color: white;
 flex-direction: column;
+background: aqua;
+background: linear-gradient(121deg, rgba(102,163,30,1) 20%, rgb(138, 20, 84) 50%, rgb(230, 14, 22) 100% ); 
+    width: 39vw;
+    height: 35vh;
+    margin: 7%;
 }
 
 

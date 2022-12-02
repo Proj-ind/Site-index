@@ -135,7 +135,7 @@ function cadastrarTribo() {
         console.log("resposta: ", resposta);
         
         if (resposta.ok) {
-            cardErro.style.display = "block";
+            // cardErro.style.display = "block";
             
             /*     setTimeout(() => {
                 window.location = "login.html";
@@ -190,7 +190,6 @@ function resultado() {
         if (resposta.ok) {
             
                          window.location = "saibamais.html";
-            
             
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
